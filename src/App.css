@@ -1,0 +1,51 @@
+:root {
+  --primary-color: rgb(0, 161, 121);
+  --secondary-color: rgb(1, 80, 60);
+}
+
+.App, #root {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.header-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header-side span {
+  font-size: 1.3rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100%;
+  max-height: 60vh;
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+

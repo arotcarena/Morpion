@@ -1,0 +1,40 @@
+.grid {
+    width: 40vh;
+    height: 40vh;
+    border-radius: 8px;
+    border: solid 2px var(--primary-color);
+    margin: 40px;
+}
+
+.grid-line {
+    display: flex;
+    height: 33.3333%
+}
+
+.grid-box {
+    width: 33.3333333%;
+    border: solid 2px var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-box.active {
+    cursor: pointer;
+}
+
+.grid-line:first-child .grid-box:first-child {
+    border-radius: 7px 0 0 0;
+}
+
+.grid-line:first-child .grid-box:last-child {
+    border-radius: 0 7px 0 0;
+}
+
+.grid-line:last-child .grid-box:first-child {
+    border-radius: 0 0 0 7px;
+}
+
+.grid-line:last-child .grid-box:last-child {
+    border-radius: 0 0 7px 0;
+}

@@ -1,0 +1,98 @@
+
+
+.launcher-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.launcher {
+    background-color: white;
+    margin-top: calc(38.5vh);
+    transform: translateY(-50%);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.launcher h1 {
+    margin: 0;
+}
+
+.launcher h2 {
+    font-size: 1.5rem;
+}
+
+.container-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.launcher.step1 {
+    animation: appearsLeft .6s both;
+}
+
+.launcher.step2 {
+    animation: appearsRight .6s both;
+}
+
+@keyframes appearsLeft {
+    from {
+        transform: translate(-600px, -50%);
+        opacity: 0;
+    } to {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+}
+@keyframes appearsRight {
+    from {
+        transform: translate(600px, -50%);
+        opacity: 0;
+    } to {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+}
+
+.horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.block {
+    width: 68px;
+    height: 68px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.block.selected {
+    border: dotted 2px var(--secondary-color);
+}
+
+.block-small {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 1000px;
+    transition: transform .3s;
+    margin: 15px 7px;
+}
+
+.block-small.selected {
+    transform: scale(1.6);
+}
